@@ -27,8 +27,27 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jcl</artifactId>
+                <version>5.3.18</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>redhat-lightwell-remediated</id>
+            <name>Red Hat Lightwell Remediated Repository</name>
+            <url>https://packages.redhat.com/lightwell/public-lightwell-demo/java/remediated/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- Quarkus REST (JAX-RS) -->
@@ -64,11 +83,11 @@
             <version>20220320</version>
         </dependency>
 
-        <!-- spring-core 5.3.18 (utility classes) -->
+        <!-- spring-core 5.3.18.rhlw-00010 (utility classes) -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.3.18</version>
+            <version>5.3.18.rhlw-00010</version>
         </dependency>
 
         <!-- Test -->
